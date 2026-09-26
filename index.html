@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptRush AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+  <header>
+    <h2>Prompt<span>Rush</span> AI</h2>
+    <p>IMAGE → PROMPT</p>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <small>AI POWERED</small>
+
+      <h1>
+        Turn your image<br>
+        into an <span>AI prompt.</span>
+      </h1>
+
+      <p>
+        Upload an image and generate a detailed prompt from it.
+      </p>
+    </section>
+
+    <section class="card">
+
+      <div class="upload" id="uploadBox">
+
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+          hidden
+        >
+
+        <div id="uploadContent">
+          <div class="icon">↑</div>
+
+          <h3>Upload your image</h3>
+
+          <p>Click here to choose an image</p>
+
+          <button id="chooseBtn">
+            Choose Image
+          </button>
+
+          <small>JPG • PNG • WEBP</small>
+        </div>
+
+        <img id="preview" alt="Preview">
+
+      </div>
+
+      <label>Prompt Style</label>
+
+      <select id="styleSelect">
+        <option value="Realistic Photography">
+          Realistic Photography
+        </option>
+
+        <option value="Cinematic">
+          Cinematic
+        </option>
+
+        <option value="Fashion Photography">
+          Fashion Photography
+        </option>
+
+        <option value="Anime">
+          Anime
+        </option>
+
+        <option value="3D Render">
+          3D Render
+        </option>
+
+        <option value="Vintage">
+          Vintage
+        </option>
+      </select>
+
+      <button
+        id="generateBtn"
+        disabled
+      >
+        ✨ Generate Prompt
+      </button>
+
+      <div class="result">
+
+        <div class="result-top">
+          <h3>Generated Prompt</h3>
+
+          <button id="copyBtn">
+            Copy
+          </button>
+        </div>
+
+        <p id="promptText">
+          Your AI prompt will appear here.
+        </p>
+
+      </div>
+
+      <p id="status"></p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    PromptRush AI • Made with AI
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
